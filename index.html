@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldArena Challenge 2.0</title>
+    <meta name="description" content="WorldArena Challenge 2.0: a world model competition spanning video quality evaluation, RL environment utility, and real-world WAM manipulation.">
+    <meta property="og:title" content="WorldArena Challenge 2.0">
+    <meta property="og:description" content="A 2.0 world model challenge built around video quality evaluation, world models as RL environments, and real-world WAM manipulation.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="#" class="nav-logo">WorldArena Challenge 2.0</a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#schedule">Dates</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#tracks">Tracks</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+            <li><a href="#organization-logos">Organization</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+    <div class="container">
+        <p class="hero-venue">July 1 - August 30, 2026</p>
+        <h1 class="hero-title">WorldArena Challenge 2.0</h1>
+        <h2 class="hero-subtitle">Benchmarking Embodied World Models Across<br>Perception, RL Utility, and Real-World Manipulation</h2>
+        <p class="hero-context">
+            WorldArena Challenge 2.0 evaluates embodied world models across video quality, interactive RL utility, and real-world manipulation.<br>
+            Items marked <strong>To Be Announced (TBA)</strong> or <strong>Coming soon</strong> will be updated after organizer confirmation.
+        </p>
+        <div class="hero-links">
+            <a href="https://worldarena2.github.io/" class="hero-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> Website</a>
+            <a href="https://arxiv.org/html/2605.17912v1" class="hero-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-lines"></i> Paper</a>
+            <a href="https://github.com/WorldArena2/WorldArena-2.0" class="hero-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+            <a href="https://huggingface.co/spaces/WorldArena/WorldArena" class="hero-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-trophy"></i> Leaderboard</a>
+        </div>
+    </div>
+</header>
+
+<!-- Important Dates -->
+<section class="section" id="schedule">
+    <div class="container container-narrow">
+        <h2 class="text-3xl font-bold text-center mb-12 text-slate-100">Important Dates</h2>
+        <div class="rounded-2xl border border-slate-700/60 bg-slate-900/70 shadow-xl p-8 md:p-10 backdrop-blur-sm">
+            <div class="relative border-l-4 border-slate-700 ml-4 md:ml-0 md:pl-8 space-y-12">
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-3 top-0 md:-left-11 w-6 h-6 bg-emerald-400 rounded-full border-4 border-slate-900"></div>
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-40 font-bold text-emerald-300 mb-1 md:mb-0">July 1, 2026</div>
+                        <div class="flex-1">
+                            <h4 class="text-lg font-bold text-slate-100">Competition Opens</h4>
+                            <p class="text-slate-300">The WorldArena Challenge 2.0 competition window begins. Submission portal details are Coming soon.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-3 top-0 md:-left-11 w-6 h-6 bg-sky-400 rounded-full border-4 border-slate-900"></div>
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-40 font-bold text-sky-300 mb-1 md:mb-0">July 15, 2026</div>
+                        <div class="flex-1">
+                            <h4 class="text-lg font-bold text-slate-100">Leaderboard Update</h4>
+                            <p class="text-slate-300">The first scheduled leaderboard update.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-3 top-0 md:-left-11 w-6 h-6 bg-indigo-400 rounded-full border-4 border-slate-900"></div>
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-40 font-bold text-indigo-300 mb-1 md:mb-0">July 30, 2026</div>
+                        <div class="flex-1">
+                            <h4 class="text-lg font-bold text-slate-100">Leaderboard Update</h4>
+                            <p class="text-slate-300">The second scheduled leaderboard update.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-3 top-0 md:-left-11 w-6 h-6 bg-violet-400 rounded-full border-4 border-slate-900"></div>
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-40 font-bold text-violet-300 mb-1 md:mb-0">August 15, 2026</div>
+                        <div class="flex-1">
+                            <h4 class="text-lg font-bold text-slate-100">Leaderboard Update</h4>
+                            <p class="text-slate-300">The third scheduled leaderboard update.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-3 top-0 md:-left-11 w-6 h-6 bg-slate-500 rounded-full border-4 border-slate-900"></div>
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-40 font-bold text-slate-300 mb-1 md:mb-0">August 30, 2026</div>
+                        <div class="flex-1">
+                            <h4 class="text-lg font-bold text-slate-100">Final Submission Deadline &amp; Leaderboard Update</h4>
+                            <p class="text-slate-300">The competition ends with the final scheduled leaderboard update.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- Overview -->
+<section class="section" id="overview">
+    <div class="container container-narrow">
+        <h2 class="section-title">Challenge Overview</h2>
+        <div class="text-block">
+            <p>
+                <strong>WorldArena Challenge 2.0</strong> is built around the next-generation WorldArena 2.0 benchmark for embodied world models.
+                The benchmark extends the original WorldArena along three coordinated axes: modality, functionality, and platform.
+            </p>
+            <p>
+                WorldArena 2.0 introduces visuo-tactile evaluation, evaluates world models as online reinforcement learning environments,
+                and expands evaluation from simulator-only settings toward simulated and real robotic platforms.
+            </p>
+            <p>
+                Following this benchmark direction, the challenge is organized into three competition tracks:
+            </p>
+            <ul class="mt-2 space-y-3 pl-6 text-slate-300 text-[1.05rem] leading-9 list-disc marker:text-sky-300">
+                <li><strong class="text-slate-100">Track 1: Video Quality Evaluation</strong> - a continuation of the 1.0 video quality task with increased difficulty and new OOD scenes.</li>
+                <li><strong class="text-slate-100">Track 2: World Model as RL Environment</strong> - evaluating whether world models can serve as interactive environments for reinforcement learning and policy optimization.</li>
+                <li><strong class="text-slate-100">Track 3: Real-World WAM Manipulation</strong> - evaluating real-world manipulation ability across tactile WAM and vision-only WAM settings.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- Competition Tracks -->
+<section class="section" id="tracks">
+    <div class="container container-narrow">
+        <h2 class="text-3xl font-bold text-center mb-12 text-slate-100">Tracks &amp; Submission</h2>
+        <div class="track-grid">
+            <article class="track-card track-card-blue">
+                <div class="track-kicker">Track 1</div>
+                <h3>Track 1: Video Quality Evaluation</h3>
+                <p>
+                    Evaluate embodied world model video generation across visual quality, motion quality, content consistency,
+                    physics adherence, 3D accuracy, and controllability.
+                </p>
+                <p>
+                    The 2.0 version keeps the 1.0 evaluation direction while increasing task difficulty and introducing OOD scenes.
+                </p>
+                <div class="track-resources">
+                    <span class="resource-label">Resources</span>
+                    <a href="https://github.com/tsinghua-fib-lab/WorldArena/tree/main/video_quality" target="_blank" rel="noopener noreferrer" class="resource-link"><i class="fab fa-github"></i> Reference Metrics</a>
+                    <span class="resource-link disabled"><i class="fas fa-database"></i> Dataset TBA</span>
+                </div>
+                <div class="track-meta">
+                    <strong>Reference metrics from WorldArena 1.0;</strong> 2.0 challenge guide and OOD dataset are To Be Announced (TBA).
+                </div>
+            </article>
+
+            <article class="track-card track-card-purple">
+                <div class="track-kicker">Track 2</div>
+                <h3>Track 2: World Model as RL Environment</h3>
+                <p>
+                    Evaluate world models as online, interactive RL environments that can support policy rollouts,
+                    reward-driven optimization, and iterative policy improvement.
+                </p>
+                <p>
+                    This track follows the functionality extension described in the WorldArena 2.0 paper.
+                </p>
+                <div class="track-resources">
+                    <span class="resource-label">Resources</span>
+                    <a href="https://github.com/WorldArena2/WorldArena-2.0/tree/main/RL_env_benchmark" target="_blank" rel="noopener noreferrer" class="resource-link"><i class="fab fa-github"></i> RL Env Benchmark</a>
+                    <a href="https://arxiv.org/html/2605.17912v1" target="_blank" rel="noopener noreferrer" class="resource-link"><i class="fas fa-file-lines"></i> Paper</a>
+                </div>
+                <div class="track-meta">
+                    <strong>Evaluation details:</strong> task list, metrics, and submission format TBA
+                </div>
+            </article>
+
+            <article class="track-card track-card-teal">
+                <div class="track-kicker">Track 3</div>
+                <h3>Track 3: Real-World WAM Manipulation</h3>
+                <p>
+                    Evaluate real-world WAM manipulation under two settings: tactile WAM and vision-only WAM.
+                </p>
+                <p>
+                    This track focuses on real-world manipulation behavior, interface compatibility, and deployment-facing evaluation.
+                </p>
+                <div class="track-resources">
+                    <span class="resource-label">Resources</span>
+                    <a href="https://github.com/WorldArena2/WorldArena-2.0/tree/main/real_world_benchmark" target="_blank" rel="noopener noreferrer" class="resource-link"><i class="fab fa-github"></i> Real-World Interface</a>
+                    <a href="https://github.com/WorldArena2/WorldArena-2.0/tree/main/visual-tactile_world_model_pipeline" target="_blank" rel="noopener noreferrer" class="resource-link"><i class="fas fa-hand"></i> Tactile Pipeline</a>
+                </div>
+                <div class="track-meta">
+                    <strong>Hardware and remote evaluation:</strong> TBA
+                </div>
+            </article>
+        </div>
+
+        <div class="status-note status-note-amber">
+            <p><strong>Close-source models:</strong> API access policy is TBA.</p>
+        </div>
+        <div class="status-note status-note-sky">
+            <p><strong>Submission limit:</strong> Each team may submit at most twice per day. If a team submits more than twice on the same day, the latest two submissions of that day will be used for evaluation.</p>
+        </div>
+        <div class="status-note status-note-slate">
+            <p><strong>Community channels:</strong> Discord, WeChat, QR groups, and other support channels are Coming soon.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- Awards -->
+<section class="section" id="awards">
+    <div class="container container-narrow">
+        <h2 class="section-title">Awards</h2>
+        <div class="rounded-2xl border border-slate-700/60 bg-slate-900/70 shadow-xl p-8 md:p-10 backdrop-blur-sm">
+            <p class="text-center text-slate-300 mb-6">
+                Prize amounts, ranking tiers, certificates, sponsor wording, and presentation opportunities are TBA.
+            </p>
+            <div class="award-tba-grid">
+                <div class="award-tba-card">
+                    <p class="award-place">Track 1</p>
+                    <h3 class="award-name">Video Quality Evaluation</h3>
+                    <p class="award-prize">TBA</p>
+                </div>
+                <div class="award-tba-card">
+                    <p class="award-place">Track 2</p>
+                    <h3 class="award-name">World Model as RL Environment</h3>
+                    <p class="award-prize">TBA</p>
+                </div>
+                <div class="award-tba-card">
+                    <p class="award-place">Track 3</p>
+                    <h3 class="award-name">Real-World WAM Manipulation</h3>
+                    <p class="award-prize">TBA</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- Organization -->
+<section class="section" id="organization">
+    <div class="container container-narrow">
+        <h2 class="section-title" id="organizers">Organizers</h2>
+        <div class="organization-grid">
+            <div class="organization-item">
+                <div class="organization-card">
+                    <img src="static/img/person/Mu%20Xu_AMAP_1.png" alt="Mu Xu portrait" class="organization-avatar" loading="lazy">
+                </div>
+                <div class="organization-name">Mu Xu</div>
+                <div class="organization-affiliation">AMAP</div>
+            </div>
+            <div class="organization-item">
+                <div class="organization-card">
+                    <img src="static/img/person/Zhicheng%20Liu_AMAP_2.png" alt="Zhicheng Liu portrait" class="organization-avatar" loading="lazy">
+                </div>
+                <div class="organization-name">Zhicheng Liu</div>
+                <div class="organization-affiliation">AMAP</div>
+            </div>
+            <div class="organization-item">
+                <div class="organization-card">
+                    <img src="static/img/person/Wei%20Wu_Manifold%20AI_3.png" alt="Wei Wu portrait" class="organization-avatar" loading="lazy">
+                </div>
+                <div class="organization-name">Wei Wu</div>
+                <div class="organization-affiliation">Manifold AI</div>
+            </div>
+            <div class="organization-item">
+                <div class="organization-card">
+                    <img src="static/img/person/Yu%20Shang_THU_4.png" alt="Yu Shang portrait" class="organization-avatar" loading="lazy">
+                </div>
+                <div class="organization-name">Yu Shang</div>
+                <div class="organization-affiliation">THU</div>
+            </div>
+            <div class="organization-item">
+                <div class="organization-card">
+                    <img src="static/img/person/Huazhe%20Xu_THU_5.png" alt="Huazhe Xu portrait" class="organization-avatar" loading="lazy">
+                </div>
+                <div class="organization-name">Huazhe Xu</div>
+                <div class="organization-affiliation">THU</div>
+            </div>
+            <div class="organization-item">
+                <div class="organization-card">
+                    <img src="static/img/person/Dhruv%20Shah_Princeton_6.png" alt="Dhruv Shah portrait" class="organization-avatar" loading="lazy">
+                </div>
+                <div class="organization-name">Dhruv Shah</div>
+                <div class="organization-affiliation">Princeton</div>
+            </div>
+            <div class="organization-item">
+                <div class="organization-card">
+                    <img src="static/img/person/Tat-seng%20Chua_NUS_7.png" alt="Tat-seng Chua portrait" class="organization-avatar" loading="lazy">
+                </div>
+                <div class="organization-name">Tat-seng Chua</div>
+                <div class="organization-affiliation">NUS</div>
+            </div>
+            <div class="organization-item">
+                <div class="organization-card">
+                    <img src="static/img/person/Hongyang%20Li_HKU_8.png" alt="Hongyang Li portrait" class="organization-avatar" loading="lazy">
+                </div>
+                <div class="organization-name">Hongyang Li</div>
+                <div class="organization-affiliation">HKU</div>
+            </div>
+            <div class="organization-item">
+                <div class="organization-card">
+                    <img src="static/img/person/Chen%20Gao_THU_9.png" alt="Chen Gao portrait" class="organization-avatar" loading="lazy">
+                </div>
+                <div class="organization-name">Chen Gao</div>
+                <div class="organization-affiliation">THU</div>
+            </div>
+            <div class="organization-item">
+                <div class="organization-card">
+                    <img src="static/img/person/Wenwu%20Zhu_THU_10.png" alt="Wenwu Zhu portrait" class="organization-avatar" loading="lazy">
+                </div>
+                <div class="organization-name">Wenwu Zhu</div>
+                <div class="organization-affiliation">THU</div>
+            </div>
+            <div class="organization-item">
+                <div class="organization-card">
+                    <img src="static/img/person/Xihui%20Liu_HKU_11.png" alt="Xihui Liu portrait" class="organization-avatar" loading="lazy">
+                </div>
+                <div class="organization-name">Xihui Liu</div>
+                <div class="organization-affiliation">HKU</div>
+            </div>
+            <div class="organization-item">
+                <div class="organization-card">
+                    <img src="static/img/person/Yong%20Li_THU_12.png" alt="Yong Li portrait" class="organization-avatar" loading="lazy">
+                </div>
+                <div class="organization-name">Yong Li</div>
+                <div class="organization-affiliation">THU</div>
+            </div>
+        </div>
+        <h2 class="section-title organization-section-title-secondary" id="organization-logos">Organization</h2>
+        <div class="organization-logo-grid">
+            <a href="https://amap-cvlab.github.io/" class="organization-logo-item" target="_blank" rel="noopener noreferrer" aria-label="Amap CV Lab">
+                <div class="organization-logo-card">
+                    <div class="organization-logo-wrap">
+                        <img src="static/img/normalized/amap.png" alt="Amap CV Lab logo" class="organization-logo">
+                    </div>
+                </div>
+                <div class="organization-logo-name">Amap CV Lab</div>
+            </a>
+            <a href="https://manifoldai.cn/" class="organization-logo-item" target="_blank" rel="noopener noreferrer" aria-label="Manifold AI">
+                <div class="organization-logo-card">
+                    <div class="organization-logo-wrap">
+                        <img src="static/img/normalized/manifold.png" alt="Manifold AI logo" class="organization-logo">
+                    </div>
+                </div>
+                <div class="organization-logo-name">Manifold AI</div>
+            </a>
+            <a href="https://www.princeton.edu/" class="organization-logo-item" target="_blank" rel="noopener noreferrer" aria-label="Princeton University">
+                <div class="organization-logo-card">
+                    <div class="organization-logo-wrap">
+                        <img src="static/img/normalized/princeton.png" alt="Princeton University logo" class="organization-logo">
+                    </div>
+                </div>
+                <div class="organization-logo-name">Princeton University</div>
+            </a>
+            <a href="https://www.nus.edu.sg/" class="organization-logo-item" target="_blank" rel="noopener noreferrer" aria-label="National University of Singapore">
+                <div class="organization-logo-card">
+                    <div class="organization-logo-wrap">
+                        <img src="static/img/normalized/nus.png" alt="National University of Singapore logo" class="organization-logo">
+                    </div>
+                </div>
+                <div class="organization-logo-name">National University of Singapore</div>
+            </a>
+            <a href="https://www.tsinghua.edu.cn/en/" class="organization-logo-item" target="_blank" rel="noopener noreferrer" aria-label="Tsinghua University">
+                <div class="organization-logo-card">
+                    <div class="organization-logo-wrap">
+                        <img src="static/img/normalized/tsinghua.png" alt="Tsinghua University logo" class="organization-logo">
+                    </div>
+                </div>
+                <div class="organization-logo-name">Tsinghua University</div>
+            </a>
+            <a href="https://www.hku.hk/" class="organization-logo-item" target="_blank" rel="noopener noreferrer" aria-label="The University of Hong Kong">
+                <div class="organization-logo-card">
+                    <div class="organization-logo-wrap">
+                        <img src="static/img/normalized/hku.png" alt="The University of Hong Kong logo" class="organization-logo">
+                    </div>
+                </div>
+                <div class="organization-logo-name">The University of Hong Kong</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- Contact -->
+<section class="section" id="contact">
+    <div class="container container-narrow">
+        <h2 class="section-title">Contact</h2>
+        <div class="text-block">
+            <p>Official contact email: <strong>To Be Announced (TBA)</strong></p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container container-narrow">
+        <p>&copy; 2026 WorldArena Challenge 2.0</p>
+    </div>
+</footer>
+
+<script>
+// Navbar
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile nav
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    navToggle.classList.toggle('active');
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        navToggle.classList.remove('active');
+    });
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const top = target.getBoundingClientRect().top + window.pageYOffset - 70;
+            window.scrollTo({ top, behavior: 'smooth' });
+        }
+    });
+});
+</script>
+
+</body>
+</html>
