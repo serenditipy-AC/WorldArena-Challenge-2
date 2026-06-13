@@ -123,6 +123,8 @@ a:hover {
 }
 
 .nav-logo {
+    display: inline-flex;
+    align-items: center;
     color: var(--text);
     font-family: var(--serif);
     font-size: 1.15rem;
@@ -232,7 +234,7 @@ a:hover {
     text-align: center;
 }
 
-.hero-venue,
+.hero-conference,
 .hero-context,
 .hero-title,
 .hero-subtitle,
@@ -240,34 +242,30 @@ a:hover {
     animation: rise-in 0.9s both;
 }
 
-.hero-venue { animation-delay: 0.05s; }
+.hero-conference { animation-delay: 0.05s; }
 .hero-context { animation-delay: 0.12s; }
 .hero-title { animation-delay: 0.18s; }
 .hero-subtitle { animation-delay: 0.28s; }
 .hero-links { animation-delay: 0.38s; }
 
-.hero-venue {
+.hero-conference {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 16px;
-    margin-bottom: 22px;
-    border: 1px solid var(--line-strong);
-    border-radius: 999px;
-    background: rgba(92, 161, 227, 0.08);
+    margin: 0 auto 22px;
     color: var(--accent);
     font-family: var(--mono);
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: clamp(0.95rem, 2vw, 1.18rem);
+    font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
-.hero-venue::before,
-.hero-venue::after {
+.hero-conference::before,
+.hero-conference::after {
     content: "";
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: currentColor;
     box-shadow: 0 0 18px currentColor;
@@ -1181,10 +1179,9 @@ a:hover {
         padding: 126px 0 80px;
     }
 
-    .hero-venue {
-        padding: 9px 12px;
-        font-size: 0.72rem;
-        letter-spacing: 0.1em;
+    .hero-conference {
+        font-size: 0.82rem;
+        letter-spacing: 0.09em;
     }
 
     .hero-links {
